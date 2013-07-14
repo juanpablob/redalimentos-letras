@@ -1,0 +1,16 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Facebook API Config
+|--------------------------------------------------------------------------
+|
+*/
+$config = array(
+    'appId'         => '00',
+    'secret'        => '00',
+    'permissions'   => 'email,user_birthday,user_hometown,publish_stream',
+    'app_url'       => 'https://www.facebook.com/Page/app_00'
+);
+
+?>

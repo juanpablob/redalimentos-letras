@@ -1,0 +1,10 @@
+RewriteEngine on
+ 
+#Development
+#Options FollowSymLinks
+#RewriteCond $1 !^(index\.php|assets|media|media|robots\.txt)
+#RewriteRule ^(.*)$ index.php?/$1 [L]
+ 
+#Productions
+RewriteCond $1 !^(index\.php|images|assets|media|robots\.txt)
+RewriteRule ^(.*)$ index.php?/$1 [L]

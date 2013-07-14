@@ -3,3 +3,11 @@
 */logs/!index.html
 */cache/*
 */cache/!index.html
+
+/index.php
+/application/config/config.php
+/application/config/database.php
+/application/config/facebook.php
+/application/config/site.php
+
+*.DS_Store
