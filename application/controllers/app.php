@@ -69,9 +69,9 @@
                 ),
                 'url' => 'http://api.twitter.com/1.1/search/tweets.json',
                 'method' => 'GET',
-                'query' => '?q=%23protagonistas13&result_type=recent&count=50',
+                'query' => '?q=%23SolteraOtraVez2&result_type=recent&count=50',
                 'fields' => array(
-                    'q' => '#protagonistas13',
+                    'q' => '#SolteraOtraVez2',
                     'result_type' => 'recent',
                     //'since_id' => 00,
                     'count' => 50
@@ -104,6 +104,33 @@
                 
                 $this->tweet_model->save_tweets($tweets);
             }
+        }
+        
+        /*
+        | Get Tweets
+        |-------------------------------------------
+        */
+        public function get_tweets() {
+            $tweets = $this->tweet_model->get_latest_tweets();
+            
+            $data = array(
+                'data' => $tweets
+            );
+            
+            if($tweets) {
+                $data['status'] = true;
+                $data['message'] = 'ok';
+            }
+            else {
+                $data['status'] = false;
+                $data['message'] = 'oops!';
+            }
+            
+            echo json_encode($data);
+        }
+        
+        public function hola() {
+            echo 'hola';
         }
         
     }

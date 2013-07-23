@@ -26,7 +26,17 @@
         }
         
         public function get_latest_tweets() {
+            //$date_time = date('YYYY-mm-dd G:i:s');
             
+            $this->db->order_by('created', 'desc');
+            $query = $this->db->get('statuses', 30);
+            
+            if($query || $query->num_rows > 0) {
+                return $query->result();
+            }
+            else {
+                return false;
+            }
         }
         
     }
