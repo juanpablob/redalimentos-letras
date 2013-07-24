@@ -114,7 +114,8 @@
             $tweets = $this->tweet_model->get_latest_tweets();
             
             $data = array(
-                'data' => $tweets
+                'data' => $tweets,
+                'chars_counter' => $this->tweet_model->get_counter()
             );
             
             if($tweets) {
