@@ -1,6 +1,7 @@
 var app = {
     baseUrl: '/',
     collectedChars: 0,
+    video: '',
     
     getTweets: function(callback) {
         $.ajax({
@@ -20,12 +21,14 @@ var app = {
     
     ui: function() {
         // Load video
-        var bv = new $.BigVideo();
+        /*app.video = new $.BigVideo();
+        app.video.init();
+        app.video.show(app.baseUrl + 'assets/img/level1.gif');*/
         
-        bv.init();
-        bv.show(app.baseUrl + 'assets/img/oceans.mp4', {
-            ambient: true
-        });
+        // Load image fallback
+        $.backstretch(app.baseUrl + 'assets/img/level2.gif');
+        $('<img />').attr('src', app.baseUrl + 'assets/img/level2.gif');
+        $('<img />').attr('src', app.baseUrl + 'assets/img/level1.gif');
     },
     
     triggers: function() {
@@ -51,7 +54,7 @@ var app = {
             $.each(data.data, function(index, value) {
                 time = 6000 * (index + 1);
                 
-                setTimeout(function() {
+                setTimeout(function() {                    
                     diff = 140 - value.text.length;
                     
                     $('.tweet').html(value.text);
@@ -65,6 +68,17 @@ var app = {
                     //$('.counter span').html(chars_counter);
                     
                     app.updateCounter(chars_counter - diff, chars_counter);
+                    
+                    // Load video
+                    if(diff > 84) {
+                        $.backstretch(app.baseUrl + 'assets/img/level1.gif');
+                    }
+                    else if(diff < 84 && diff > 21) {
+                        $.backstretch(app.baseUrl + 'assets/img/level2.gif');
+                    }
+                    else if(diff < 21) {
+                        $.backstretch(app.baseUrl + 'assets/img/level3.gif');
+                    }
                 }, time);
             });
         });
@@ -91,5 +105,12 @@ var app = {
         
         app.ui();
         app.triggers();
+        
+        $('.trigg-video').click(function(e) {
+            e.preventDefault();
+            if($(this).attr('href') == '#') {
+                alert('Unable to load video.');
+            }
+        })
     }
 }

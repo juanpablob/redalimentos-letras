@@ -16,10 +16,11 @@
         
         <!-- scripts -->
         <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.min.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>
+        <!--<script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.22.custom.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.imagesloaded.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/video.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bigvideo.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/bigvideo.js"></script>-->
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/app.js"></script>
         <script>
@@ -81,15 +82,15 @@
                     <!-- facebook -->
                     <div class="widget facebook">
                         <hgroup class="clearfix">
-                            <h3>/redalimentos.cl</h3>
+                            <h3>facebook</h3>
                             
                             <div class="extra">
-                                
+                                <div class="fb-like" data-href="http://www.facebook.com/redalimentos.cl" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                             </div>
                         </hgroup>
                         
                         <div class="inside">
-                            <!--<div class="fb-like-box" data-href="https://www.facebook.com/redalimentos.cl" data-width="280" data-height="300" data-show-faces="true" data-stream="false" data-show-border="false" data-header="false"></div>-->
+                            <img src="<?php echo base_url(); ?>assets/img/faces.png" alt="" />
                         </div>
                     </div>
                     <!-- /facebook -->
@@ -98,12 +99,16 @@
                     <div class="widget corporate">
                         <hgroup class="clearfix">
                             <h3>Conoce Red de Alimentos</h3>
+                            
+                            <div class="extra">
+                                
+                            </div>
                         </hgroup>
                         
                         <div class="inside">
                             <p>Necesitamos que más y más personas conozcan el trabajo de Red de Alimentos. Por eso te pedimos que le des "me gusta" a nuestra labor. Así seremos más los que queremos erradicar el hambre en nuestro país, y podremos convencer a más empresas para que nos aporten con alimentos. Gracias por tu ayuda!</p>
                             
-                            <a href="#" class="btn btn-small">¿A quienes ayudamos?</a> <a href="#" class="btn btn-small">Colaboradores</a>
+                            <a href="#" class="btn btn-small trigg-video">¿A quienes ayudamos?</a> <a href="http://web.redalimentos.cl/nuestros-socios/colaboradores/" class="btn btn-small">Colaboradores</a>
                         </div>
                     </div>
                     <!-- /corporate -->
