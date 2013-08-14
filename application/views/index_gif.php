@@ -16,11 +16,11 @@
         
         <!-- scripts -->
         <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.2.min.js"></script>
-        <!--<script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>-->
-        <script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/jquery.backstretch.min.js"></script>
+        <!--<script src="<?php echo base_url(); ?>assets/js/jquery-ui-1.8.22.custom.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/jquery.imagesloaded.min.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/video.js"></script>
-        <script src="<?php echo base_url(); ?>assets/js/bigvideo.js"></script>
+        <script src="<?php echo base_url(); ?>assets/js/bigvideo.js"></script>-->
         <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
         <script src="<?php echo base_url(); ?>assets/js/app.js"></script>
         <script>
@@ -54,6 +54,8 @@
                     <strong class="counter">0000</strong>
                     <small>caracteres</small>
                 </div>
+                
+                <span class="arrow"></span>
             </div>
             <!-- call -->
             
@@ -106,7 +108,7 @@
                         <div class="inside">
                             <p>Necesitamos que más y más personas conozcan el trabajo de Red de Alimentos. Por eso te pedimos que le des "me gusta" a nuestra labor. Así seremos más los que queremos erradicar el hambre en nuestro país, y podremos convencer a más empresas para que nos aporten con alimentos. Gracias por tu ayuda!</p>
                             
-                            <a href="#rda-video" class="btn btn-small trigg-video" data-toggle="modal"><i class="icon-play"></i> Ver Video</a> <a href="#" class="btn btn-small trigg-video">¿A quienes ayudamos?</a> <a href="http://web.redalimentos.cl/nuestros-socios/colaboradores/" class="btn btn-small">Colaboradores</a>
+                            <a href="#" class="btn btn-small trigg-video">¿A quienes ayudamos?</a> <a href="http://web.redalimentos.cl/nuestros-socios/colaboradores/" class="btn btn-small">Colaboradores</a>
                         </div>
                     </div>
                     <!-- /corporate -->
@@ -114,23 +116,6 @@
             </div>
             <!-- /etc -->
         </div>
-        
-        <!-- modal -->
-        <div id="rda-video" class="modal hide fade">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>¿Qué hacemos?</h3>
-            </div>
-            
-            <div class="modal-body">
-                
-            </div>
-            
-            <div class="modal-footer">
-                <a href="#" class="btn" data-dismiss="modal">Cerrar</a>
-            </div>
-        </div>
-        <!-- /modal -->
         
         <!-- scripts -->
         <div id="fb-root"></div>

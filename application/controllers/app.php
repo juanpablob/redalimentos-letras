@@ -52,6 +52,13 @@
             $this->view_data['page_title'] = 'Mira tus letras!';
             
             // Load view
+            /*if($_GET['v'] == 'video') {
+                $this->load->view('index_video.php', $this->view_data);
+            }
+            else {
+                $this->load->view('index.php', $this->view_data);
+            }*/
+            
             $this->load->view('index.php', $this->view_data);
         }
         

@@ -21,22 +21,19 @@ body {
   height: 100%;
   z-index: 10 !important;
   overflow: hidden;
-  background: url('../img/front-pattern.png');
+  background: url('../img/front-pattern2.png');
 }
 /** Call
 ------------------------------------ **/
 .call {
   position: relative;
   width: 860px;
-  padding: 40px 20px;
+  padding: 40px 20px 73px 20px;
   margin: 90px auto 0 auto;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background-color: rgba(255, 255, 255, 0.8);
+  /*.rounded(8px);
+    background-color: rgba(255, 255, 255, 0.8);*/
+
+  background: url('../img/call-bgr.png') center center no-repeat;
 }
 .call span.arrow {
   position: absolute;
@@ -119,14 +116,16 @@ body {
   margin: 0 auto;
 }
 .etc .widget {
-  width: 280px;
+  width: 33.333%;
   min-height: 220px;
   padding-bottom: 20px;
   float: left;
+  background-color: #6c207e;
 }
 .etc .widget hgroup {
   margin: 0;
-  padding: 15px 0;
+  padding: 10px 15px;
+  background-color: #41134c;
 }
 .etc .widget hgroup h3 {
   float: left;
@@ -137,6 +136,9 @@ body {
 }
 .etc .widget hgroup .extra {
   float: right;
+}
+.etc .widget .inside {
+  padding: 10px 15px 0 15px;
 }
 .etc .twitter .tweet {
   font-family: 'Noto Serif', Georgia, serif;
@@ -174,14 +176,15 @@ body {
   color: #fff;
 }
 .etc .facebook {
-  margin-left: 20px;
+  background-color: #40134b;
 }
-.etc .corporate {
-  margin-left: 20px;
+.etc .facebook hgroup {
+  background-color: #260b2d;
 }
 .etc .corporate .inside p {
   margin-bottom: 15px;
   font-size: 12px;
+  line-height: 17px;
   color: #fff;
 }
 #big-video-wrap {

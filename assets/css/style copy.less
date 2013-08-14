@@ -14,7 +14,7 @@ body {
     height: 100%;
     z-index: 10 !important;
     overflow: hidden;
-    background: url('../img/front-pattern2.png');
+    background: url('../img/front-pattern.png');
 }
 
 /** Call
@@ -22,11 +22,10 @@ body {
 .call {
     position: relative;
     width: 860px;
-    padding: 40px 20px 73px 20px;
+    padding: 40px 20px;
     margin: 90px auto 0 auto;
-    /*.rounded(8px);
-    background-color: rgba(255, 255, 255, 0.8);*/
-    background: url('../img/call-bgr.png') center center no-repeat;
+    .rounded(8px);
+    background-color: rgba(255, 255, 255, 0.8);
     
     span.arrow {
         position: absolute;
@@ -111,17 +110,15 @@ body {
     }
     
     .widget {
-        width: 33.333%;
+        width: 280px;
         min-height: 220px;
         padding-bottom: 20px;
         float: left;
-        background-color: #6c207e;
         
         hgroup {
             margin: 0;
-            padding: 10px 15px;
+            padding: 15px 0;
             //background-color: #260b2d;
-            background-color: #41134c;
             
             h3 {
                 float: left;
@@ -134,14 +131,9 @@ body {
                 float: right;
             }
         }
-        
-        .inside {
-            padding: 10px 15px 0 15px;
-        }
     }
     
     .twitter {
-        
         .tweet {
             font-family: 'Noto Serif', Georgia, serif;
             font-size: 18px;
@@ -178,22 +170,16 @@ body {
     }
     
     .facebook {
-        //margin-left: 20px;
-        background-color: #40134b;
-        
-        hgroup {
-            background-color: #260b2d;
-        }
+        margin-left: 20px;
     }
     
     .corporate {
-        //margin-left: 20px;
+        margin-left: 20px;
         
         .inside {
             p {
                 margin-bottom: 15px;
                 font-size: 12px;
-                line-height: 17px;
                 color: #fff;
             }
         }

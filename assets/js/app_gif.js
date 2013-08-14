@@ -21,26 +21,14 @@ var app = {
     
     ui: function() {
         // Load video
-        app.video = new $.BigVideo();
-        app.video.init();
-        app.video.show(app.baseUrl + 'assets/img/level3.mp4', { ambient: true });
+        //app.video = new $.BigVideo();
+        //app.video.init();
+        //app.video.show(app.baseUrl + 'assets/img/level1.gif');
         
         // Load image fallback
-        /*$.backstretch(app.baseUrl + 'assets/img/level2.gif');
+        $.backstretch(app.baseUrl + 'assets/img/level2.gif');
         $('<img />').attr('src', app.baseUrl + 'assets/img/level2.gif');
-        $('<img />').attr('src', app.baseUrl + 'assets/img/level1.gif');*/
-        
-        $('a[href="#"]').click(function(e) {
-            e.preventDefault();
-        });
-        
-        $('#rda-video').on('show', function() {
-            $(this).find('.modal-body').html('<iframe width="530" height="298" src="//www.youtube.com/embed/98CmjAVWYTE?rel=0" frameborder="0" allowfullscreen></iframe>');
-        });
-        
-        $('#rda-video').on('hide', function() {
-            $(this).find('.modal-body').html();
-        });
+        $('<img />').attr('src', app.baseUrl + 'assets/img/level1.gif');
     },
     
     triggers: function() {
@@ -83,13 +71,13 @@ var app = {
                     
                     // Load video
                     if(diff > 84) {
-                        app.video.show(app.baseUrl + 'assets/img/level1.mp4', { ambient: true });
+                        $.backstretch(app.baseUrl + 'assets/img/level1.gif');
                     }
                     else if(diff < 84 && diff > 21) {
-                        app.video.show(app.baseUrl + 'assets/img/level2.mp4', { ambient: true });
+                        $.backstretch(app.baseUrl + 'assets/img/level2.gif');
                     }
                     else if(diff < 21) {
-                        app.video.show(app.baseUrl + 'assets/img/level3.mp4', { ambient: true });
+                        $.backstretch(app.baseUrl + 'assets/img/level3.gif');
                     }
                 }, time);
             });
@@ -117,5 +105,12 @@ var app = {
         
         app.ui();
         app.triggers();
+        
+        $('.trigg-video').click(function(e) {
+            e.preventDefault();
+            if($(this).attr('href') == '#') {
+                alert('Unable to load video.');
+            }
+        })
     }
 }
